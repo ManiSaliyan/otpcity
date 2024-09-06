@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Josefin+Sans&family=Kanit:wght@300&family=Orbitron:wght@400;500;700&family=Pirata+One&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+  background-color: #111215;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.nav-list {
+    border-top: 1px solid #ac765d;
+    padding: 5px 0;
+    border-bottom: 1px solid #ac765d;
+}
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin: 0 20px;
+}
+.hero-one, .hero-two, .hero-Three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 310px;
+    box-shadow: 1px 2px 3px 4px rgba(107, 107, 107, 0.4);
+}
+i {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    font-size: 30px;
+}
+.hero-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.hero-content {
+    font-size: 15px;
+    color: #bbbaba;
+}
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.instructions-title-div {
+    position: relative;
+}
+.instructions-title {
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #73aabb;
+    font-size: 25px;
+    font-family: 'Kanit',arial;
+}
+.instructions-title::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 195px;
+    top: 90%;
+    left: 0;
+    background-color: #8d817d;
+}
+@media (max-width: 660px) and (min-width:320px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+.about{
+    margin-top: 20px;
+    margin-left:10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-title{
+    font-size: 25px;
+    color: red;
+    align-items: center;
+}
+.about-content{
+    font-size: 16px;
+    color: #bbbaba;
+}
+
+@mixin tablet-and-up {
+    @media screen and (min-width: 769px) { @content; }
+}
+@mixin mobile-and-up {
+    @media screen and (min-width: 601px) { @content; }
+}
+@mixin tablet-and-down  {
+    @media screen and (max-width: 768px) { @content; }
+}
+@mixin mobile-only {
+    @media screen and (max-width: 600px) { @content; }
+}
+
+
+ul, li{
+  list-style: none;
+  padding: 0;
+}
+.sessions{
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+li{
+  padding-bottom: 1.5rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+  &:last-child{
+    border: 0px;
+    padding-bottom: 0;
+  }
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid #4e5ed3;
+    box-shadow: 3px 3px 0px #bab5f8;
+    box-shadow: 3px 3px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+  }
+}
+.time{
+  color: #f0f0f3;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  @include mobile-and-up{
+    font-size: .9rem;
+  }
+  @include mobile-only{
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+}
+.instructions-content{
+  color: #9e9e9e;
+      font-family: sans-serif;
+  line-height: 1.5;
+  margin-top:0.4rem;
+  @include mobile-only{
+    font-size: .9rem;
+  }
+}
